@@ -31,7 +31,7 @@ style:this.getInitialStyle().borderedBtn};
 return(0,_computeProps2.default)(this.props,defaultProps);
 }},{key:'render',value:function render()
 {var _this2=this;
-if(_reactNative.Platform.OS==='ios'||_platform2.default.androidRipple===false||_reactNative.Platform['Version']<=21){
+if(_reactNative.Platform.OS!=='android'||_platform2.default.androidRipple===false||_reactNative.Platform['Version']<=21){
 return(
 _react2.default.createElement(_reactNative.TouchableOpacity,_extends({},
 this.prepareRootProps(),{
