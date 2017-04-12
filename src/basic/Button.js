@@ -31,7 +31,7 @@ class Button extends Component {
     return computeProps(this.props, defaultProps);
   }
   render() {
-    if (Platform.OS==='ios' || variables.androidRipple===false || Platform['Version'] <= 21) {
+    if (Platform.OS!=='android' || variables.androidRipple===false || Platform['Version'] <= 21) {
       return (
         <TouchableOpacity
           {...this.prepareRootProps()}
