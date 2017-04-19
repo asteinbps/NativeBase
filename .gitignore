@@ -133,3 +133,4 @@ captures/
 
 ### Android Patch ###
 gen-external-apklibs
+dist/ejectTheme.js.map
