@@ -32,7 +32,7 @@ return(0,_computeProps2.default)(this.props,defaultProps);
 var children=_reactNative.Platform.OS==='ios'?
 this.props.children:
 _react2.default.Children.map(this.props.children,function(child){return child.type===_Text.Text?_react2.default.cloneElement(child,_extends({capitalize:true},child.props)):child;});
-if(_reactNative.Platform.OS==='ios'||_platform2.default.androidRipple===false||_reactNative.Platform['Version']<=21){
+if(_reactNative.Platform.OS!=='android'||_platform2.default.androidRipple===false||_reactNative.Platform['Version']<=21){
 return(
 _react2.default.createElement(_reactNative.TouchableOpacity,_extends({},
 this.prepareRootProps(),{
