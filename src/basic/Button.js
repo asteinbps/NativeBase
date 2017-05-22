@@ -29,7 +29,7 @@ class Button extends Component {
     return computeProps(this.props, defaultProps);
   }
   render() {
-    const children = Platform.OS === 'ios'
+    const children = Platform.OS !== 'android'
         ? this.props.children
         : React.Children.map(this.props.children, child => child.type === Text ? React.cloneElement(child, { capitalize: true, ...child.props }) : child);
     if (Platform.OS!=='android' || variables.androidRipple===false || Platform['Version'] <= 21) {
