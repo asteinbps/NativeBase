@@ -21,6 +21,7 @@ class Content extends NativeBaseComponent {
 }
 
 Content.propTypes = {
+  ...KeyboardAwareScrollView.propTypes,
   style: React.PropTypes.object,
   padder: React.PropTypes.bool,
   disableKBDismissScroll: React.PropTypes.bool,

@@ -8,19 +8,13 @@ import mapPropsToStyleNames from '../Utils/mapPropsToStyleNames';
 class Text extends Component {
   render() {
     return (
-      <RNText
-        ref={c => this._root = c}
-        {...this.props}
-      >
-        {this.props.capitalize ? this.props.children.toUpperCase() : this.props.children}
-      </RNText>
+      <RNText ref={c => this._root = c} {...this.props} />
     );
   }
 }
 
 Text.propTypes = {
   ...RNText.propTypes,
-  uppercase: React.PropTypes.bool,
   style: React.PropTypes.object,
 };
 

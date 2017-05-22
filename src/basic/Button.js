@@ -2,9 +2,11 @@
 
 
 import React, { Component } from 'react';
+import _ from 'lodash';
 import { TouchableOpacity, Platform, View, TouchableNativeFeedback } from 'react-native';
 import { connectStyle } from 'native-base-shoutem-theme';
 import variables from './../theme/variables/platform';
+import { Badge } from './Badge';
 import { Text } from './Text';
 import computeProps from '../Utils/computeProps';
 
@@ -29,9 +31,6 @@ class Button extends Component {
     return computeProps(this.props, defaultProps);
   }
   render() {
-    const children = Platform.OS !== 'android'
-        ? this.props.children
-        : React.Children.map(this.props.children, child => child.type === Text ? React.cloneElement(child, { capitalize: true, ...child.props }) : child);
     if (Platform.OS!=='android' || variables.androidRipple===false || Platform['Version'] <= 21) {
       return (
         <TouchableOpacity
@@ -39,7 +38,7 @@ class Button extends Component {
           ref={c => this._root = c}
           activeOpacity={(this.props.activeOpacity) ? this.props.activeOpacity : 0.5}
         >
-          {children}
+          {this.props.children}
         </TouchableOpacity>
       );
     }
@@ -50,7 +49,7 @@ class Button extends Component {
               background={(this.props.androidRippleColor) ? TouchableNativeFeedback.Ripple(this.props.androidRippleColor) : TouchableNativeFeedback.Ripple(variables.androidRippleColor)}
                {...this.prepareRootProps()}>
               <View {...this.prepareRootProps()}>
-                  {children}
+                  {this.props.children}
               </View>
           </TouchableNativeFeedback>
       );
@@ -75,6 +74,8 @@ Button.propTypes = {
   large: React.PropTypes.bool,
   small: React.PropTypes.bool,
   active: React.PropTypes.bool,
+  badgeColor: React.PropTypes.string,
+  badgeValueStyle: React.PropTypes.object,
 };
 
 Button.defaultProps = {

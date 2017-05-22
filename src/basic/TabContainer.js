@@ -2,7 +2,7 @@
 
 
 import React, { Component } from 'react';
-import { View, ViewPropTypes } from 'react-native';
+import { View } from 'react-native';
 import { connectStyle } from 'native-base-shoutem-theme';
 import mapPropsToStyleNames from '../Utils/mapPropsToStyleNames';
 
@@ -16,7 +16,7 @@ class TabContainer extends Component {
 }
 
 TabContainer.propTypes = {
-  ...ViewPropTypes,
+  ...View.propTypes,
   style: React.PropTypes.object,
 };
 

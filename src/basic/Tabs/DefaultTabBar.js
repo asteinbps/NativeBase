@@ -9,8 +9,7 @@ const {
   StyleSheet,
   View,
   Animated,
-  Platform,
-  ViewPropTypes
+  Platform
 } = ReactNative;
 const Button = require('./Button');
 
@@ -22,9 +21,9 @@ const DefaultTabBar = React.createClass({
     backgroundColor: React.PropTypes.string,
     activeTextColor: React.PropTypes.string,
     inactiveTextColor: React.PropTypes.string,
-    tabStyle: ViewPropTypes.style,
+    tabStyle: View.propTypes.style,
     renderTab: React.PropTypes.func,
-    underlineStyle: ViewPropTypes.style,
+    underlineStyle: View.propTypes.style,
   },
   contextTypes: {
     theme: React.PropTypes.object,
