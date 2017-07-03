@@ -1,31 +1,35 @@
-import React, { Component } from 'react';
-import { View } from 'react-native';
+import React, { Component } from "react";
+import { View, ViewPropTypes } from "react-native";
 
-import { connectStyle } from 'native-base-shoutem-theme';
-import mapPropsToStyleNames from '../Utils/mapPropsToStyleNames';
-import {ToastContainer as Toast} from './ToastContainer';
-import {ActionSheetContainer as ActionSheet} from './Actionsheet';
-import {Text} from './Text';
+import { connectStyle } from "native-base-shoutem-theme";
+import mapPropsToStyleNames from "../Utils/mapPropsToStyleNames";
+import { ToastContainer as Toast } from "./ToastContainer";
+import { ActionSheetContainer as ActionSheet } from "./Actionsheet";
+import { Text } from "./Text";
 
 class Container extends Component {
+  // componentWillUnmount() {
+  //   Toast.toastInstance = null;
+  // }
+
   render() {
     return (
-      <View ref={c => this._root = c} {...this.props}>
+      <View ref={c => (this._root = c)} {...this.props}>
         {this.props.children}
-        <Toast ref={ (c) => {Toast.toastInstance = c;}} />
-        <ActionSheet ref={ (c) => {ActionSheet.actionsheetInstance = c;}} />
       </View>
     );
   }
 }
 
 Container.propTypes = {
-  ...View.propTypes,
-  style: React.PropTypes.object,
+  ...ViewPropTypes,
+  style: React.PropTypes.object
 };
 
-const StyledContainer = connectStyle('NativeBase.Container', {}, mapPropsToStyleNames)(Container);
+const StyledContainer = connectStyle(
+  "NativeBase.Container",
+  {},
+  mapPropsToStyleNames
+)(Container);
 
-export {
-  StyledContainer as Container,
-};
+export { StyledContainer as Container };

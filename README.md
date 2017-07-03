@@ -7,6 +7,10 @@ Essential cross-platform UI components for React Native
 
  Updated docs [here!](https://docs.nativebase.io/)
 
+ **For people having trouble upgrading to 2.1.5, check [this.](https://github.com/GeekyAnts/NativeBase/issues/928)**
+
+ **Use 2.1.5 with latest react-native version. Older versions may break**
+
 ![Demo](https://github.com/GeekyAnts/NativeBase-KitchenSink/raw/master/screenshots/iOS.gif)
 ![Demo](https://github.com/GeekyAnts/NativeBase-KitchenSink/raw/master/screenshots/Android.gif)
 
@@ -19,12 +23,7 @@ Essential cross-platform UI components for React Native
 4. [Getting Started](#4-getting-started)
 5. [Components](#5-components)
 6. [Native Starter Kit](#6-native-starter-kit)
-7. [Featured Apps](#7-featured-apps)
-  - [Native Starter Pro](#a-native-starter-pro---v600)
-  - [Ecommerce Starter](#b-ecommerce-starter---v510)
-  - [Flat App Theme](#c-flat-app-theme---v510)
-  - [Taxi App with Backend](#d-taxi-app-with-backend---v400)
-  - [Dating App Theme](#e-dating-app-theme---v100)
+7. [NativeBase Market](#7-nativebase-market)
 8. [Documentation](#8-documentation)
 9. [Website](#9-website)
 10. [Quick Links to NativeBase](#10-quick-links-to-nativebase)
@@ -81,7 +80,7 @@ npm install @expo/vector-icons --save
 **Note** <br />
 [NativeBase](https://nativebase.io/) uses some custom fonts that can be loaded using **loadAsync** function. Check out [this](https://docs.expo.io/versions/v15.0.0/sdk/font.html#expofontloadasyncname-url) expo link.
 <br />
-Synatx <br />
+Syntax <br />
 ```js
 async componentWillMount() {
       await Expo.Font.loadAsync({
@@ -91,7 +90,8 @@ async componentWillMount() {
 ```
 <br />
 
-Check out the [KitchenSink](https://github.com/GeekyAnts/NativeBase-KitchenSink/blob/CRNA/js/setup.js) with CRNA for an example of the implementation.<br />
+Check out the [KitchenSink](https://expo.io/@geekyants/nativebase-kitchenSink) with CRNA for an example of the implementation.<br />
+Find the [KitchnSink repo here](https://github.com/GeekyAnts/NativeBase-KitchenSink/tree/CRNA)
 
 ## 5. Components
 
@@ -131,4 +131,4 @@ Go through [NativeBase Docs](https://docs.nativebase.io/) to play with [NativeBa
 
 ## 11. About the creators
 
-We are [GeekyAnts](https://geekyants.com/), a startup based in Bangalore, India with 50+ developers in strength. We have been very active in the React / React Native community where we have developed [StrapUI](https://www.strapui.com/) and [StartReact](https://startreact.com/). Our other products include StartLaravel and StartAngular.
+We are [GeekyAnts](https://geekyants.com/), a startup based in Bangalore, India with 50+ developers in strength. We have been very active in the React / React Native community where we have developed [StrapUI](https://www.strapui.com/) and [StartReact](https://startreact.com/). Our other products include [StartLaravel](http://startlaravel.com) and [StartAngular](http://startangular.com).
