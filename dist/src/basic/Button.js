@@ -36,17 +36,17 @@ return(0,_computeProps2.default)(this.props,defaultProps);
 }},{key:"render",value:function render()
 {var _this2=this;
 var children=
-_reactNative.Platform.OS==="ios"?
+_reactNative.Platform.OS!=="android"?
 this.props.children:
 _react2.default.Children.map(
 this.props.children,
 function(child){return(
 child&&child.type===_Text.Text?
-_react2.default.cloneElement(child,_extends({uppercase:true},child.props)):
+_react2.default.cloneElement(child,_extends({uppercase:false},child.props)):
 child);});
 
 if(
-_reactNative.Platform.OS==="ios"||
+_reactNative.Platform.OS!=="android"||
 _platform2.default.androidRipple===false||
 _reactNative.Platform["Version"]<=21)
 {
